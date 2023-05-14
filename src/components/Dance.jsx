@@ -8,7 +8,7 @@ import React, { useEffect, useRef } from 'react'
 
 export function Model(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/assets/dance2.glb')
+  const { nodes, materials, animations } = useGLTF('./assets/dance2.glb')
   const { actions } = useAnimations(animations, group)
   
   useEffect(() => {
@@ -27,4 +27,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/assets/dance2.glb')
+useGLTF.preload('./assets/dance2.glb')

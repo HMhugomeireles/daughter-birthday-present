@@ -18,7 +18,7 @@ export default function Finish() {
     return (
         <>
             <h1 className="mt-5 font-bold text-5xl text-center">Parabéns Íris</h1>
-            <audio id="music" src={'/assets/bones.mp3'} autoPlay />
+            <audio id="music" src={'./assets/bones.mp3'} autoPlay />
             <ReactConfetti
                 width={width}
                 height={height}
