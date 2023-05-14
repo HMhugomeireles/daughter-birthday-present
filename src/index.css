@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body, 
+  body > div {
+    @apply bg-gray-900 ;
+    @apply text-white ;
+    @apply min-h-screen;
+    @apply overflow-x-hidden;
+  }
+
+  .giftbox{
+    position: absolute;
+    width:300px;
+    height:200px;
+    left:50%;
+    margin-left: -150px;
+    bottom: 40px;
+    z-index:10;
+  }
+  .giftbox>div{
+    background: #4389cf;
+    position: absolute;
+  }
+  .giftbox > div:after,&:before{
+    position: absolute;
+    content:"";
+    top: 0;
+  }
+  .giftbox:after{
+      position: absolute;
+      color:#fff;
+      width:100%;
+      content:"Click Me!";
+      left: 0;
+      bottom: 0;
+      font-size: 24px;
+      font-weight: 800;
+      text-align: center;
+      transform:rotate(-20deg);
+      transform-origin:0 0;
+  }
+  .cover{
+    width:100%;
+    top: 0;
+    left: 0;
+    height:25%;
+    z-index:2;
+  }
+  .cover:before{
+    position: absolute;
+    height:100%;
+    left: 50%;
+    width:50px;  transform:translateX(-50%);
+    background:#f7af5c;
+  }
+  .cover>div{
+    position: absolute;
+    width:50px;
+    height:50px;
+    left:50%;
+    top:-50px; transform:translateX(-50%);
+  }
+  .cover>div:before,&:after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content:"";
+    box-shadow:inset 0 0 0 15px #f7af5c;
+    border-radius:30px;
+    transform-origin:50% 100%;
+  }
+  .cover>div:before{
+    transform:translateX(-45%) skewY(40deg);
+  }
+  .cover>div:after{   transform:translateX(45%) skewY(-40deg);
+  }
+  .box{
+    right:5%;
+    left:5%;
+    height:80%;
+    bottom: 0;
+  }
+  .box:before{ 
+    width:50px;
+    height:100%;
+    left:50%;
+    transform:translateX(-50%);
+    background:#f7af5c;
+  }
+  .box:after{
+    width:100%;
+    height:30px;
+    background:rgba(0,0,0,0.2);
+  }
+}
