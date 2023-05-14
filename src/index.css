@@ -24,7 +24,8 @@
     background: #4389cf;
     position: absolute;
   }
-  .giftbox > div:after,&:before{
+  .giftbox > div:after,
+  .giftbox > div:before{
     position: absolute;
     content:"";
     top: 0;
@@ -63,7 +64,8 @@
     left:50%;
     top:-50px; transform:translateX(-50%);
   }
-  .cover>div:before,&:after{
+  .cover>div:before,
+  .cover>div:after{
     position: absolute;
     left: 0;
     top: 0;
